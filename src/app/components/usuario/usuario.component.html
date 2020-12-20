@@ -1,0 +1,19 @@
+
+<!-- Aca se crea, como un estilo navbar, y hace el mismo mecanismo de Rutas que ya sabemos -->
+<div class="row">
+    <div class="col-md-12 text-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary"
+                     routerLinkActive="active" [routerLink]="['nuevo']">Nuevo</button>
+            <button type="button" class="btn btn-secondary"
+                     routerLinkActive="active" [routerLink]="['editar']">Editar</button>
+            <button type="button" class="btn btn-secondary"
+                     routerLinkActive="active" [routerLink]="['detalle']">Detalle</button>
+        </div>
+
+    </div>
+
+</div>
+<!-- Hay que poner router-outlet, pero Angular va saber que rutas hijas, porque el archivo 
+de routes.ts principal yo le dije que esa ruta tenia hijas -->
+<router-outlet></router-outlet>

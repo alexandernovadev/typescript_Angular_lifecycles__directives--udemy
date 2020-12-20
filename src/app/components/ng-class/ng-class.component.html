@@ -1,0 +1,25 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+  Esta es la alerta cambiante
+</div>
+
+<!-- Estos botones permiten cambiar los colores ya que en la funcion 
+de hacer click cambio en valor de la variable -->
+<button type="button" class="btn btn-outline-success"
+       (click)="alerta = 'alert-success'">Success</button>
+
+<button type="button" class="btn btn-outline-danger" 
+        (click)="alerta = 'alert-danger'">Danger</button>
+
+<br><br>
+
+
+<!-- Aca se hace la misma cosa de arriba si no que un ojeto -->
+<h3 [ngClass]="{'text-danger': propiedades.danger,'text-danger': !propiedades.danger}">
+ Hola Venus
+</h3>
+
+<button (click)="propiedades.danger = !propiedades.danger" 
+      [ngClass]="{'btn-danger': propiedades.danger , 'btn-info': !propiedades.danger }"  
+      type="button" class="btn">
+  Cambiar
+</button>

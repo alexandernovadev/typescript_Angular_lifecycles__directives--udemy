@@ -1,0 +1,15 @@
+<!-- Este boton esta creado con el fin de desbilitar un boton a la hora de 
+hacer un proceso de enviar datos al servidor, porque no valdria la 
+pena enviar la data two times -->
+
+<!-- Primer se puso una variable booleana para que me ayudara a saber cuando la
+data se esta enviando, BUENO ES UN SETTIME PARA EJEMLO, pero con esa variable
+cambias clases de todos los elementos -->
+
+<button 
+    (click)="cargar()"
+    type="button" class="btn btn-primary" [disabled]="loading">
+    <i class="fa fa-save" [ngClass]="{'fa-save' : !loading,'fa-refresh fa-spin' : loading}"></i>
+    <span *ngIf="!loading"> Gurdar Elemento</span>
+    <span *ngIf="loading"> Cargando...</span>
+</button>
